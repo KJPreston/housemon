@@ -19,7 +19,7 @@ exports.info =
     initcmds:
       title: 'Initial commands sent on startup'
     inputfor:
-      title: 'Frequency/netgroups to listen for write requests - use f to signify current band and n for netgroup' + '[' + state.wildcard + ']'
+      title: 'Frequency/netgroups to listen for write requests - use f to signify current band and n for netgroup' + '[' + (state.wildcard == true) + ']'
       default: 'f/n'
 
 serialport = require 'serialport'
